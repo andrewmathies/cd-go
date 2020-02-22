@@ -10,8 +10,6 @@ jobs:
 
     steps:
       - checkout
-      - run:
-          command: mkdir $HOME/build/
-      - run: go build -x -o $HOME/build/main
+      - run: go build -x -o ./build/main
       - store_artifacts:
-          path: $HOME/build/main
+          path: /build/main
