@@ -11,5 +11,7 @@ jobs:
     steps:
       - checkout
       - run: go build -x -o ./build/main
+      - run:
+          - command: chmod +x ./build/main 
       - store_artifacts:
           path: build/main

@@ -1,0 +1,22 @@
+builder = VI that can be called from command line
+
+builder will make an exe for launcher.vi
+
+circle ci config file that uses builder. job runs every time we merge into cooking-master
+
+launcher.vi calls a new subVI, http request with circle ci api token to check for new exe
+    if new exe
+        download new exe
+        replace old exe with new exe
+        increment build number to check for next time
+        close out
+        user will manually start new exe?
+    else start normally
+
+need to make a Windows docker image that has labview installed
+circle ci config will use above image, get new repo with launcher, gea comm project, and daq project, and builder
+call builder with run, command in config file
+upload output as artifact
+
+windows base image: https://hub.docker.com/_/microsoft-windows-servercore
+example labview image: https://github.com/JohnStratoudakis/LabVIEW_Docker
