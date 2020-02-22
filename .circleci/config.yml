@@ -1,5 +1,6 @@
 # Check https://circleci.com/docs/2.0/language-go/ for more details
 version: 2
+
 jobs:
   build:
     docker:
@@ -10,7 +11,7 @@ jobs:
     steps:
       - checkout
       - run:
-          command: mkdir /build/
-      - run: go build -x -o /build/main
+          command: mkdir $HOME/build/
+      - run: go build -x -o $HOME/build/main
       - store_artifacts:
-          path: /build/main
+          path: $HOME/build/main
