@@ -20,3 +20,5 @@ upload output as artifact
 
 windows base image: https://hub.docker.com/_/microsoft-windows-servercore
 example labview image: https://github.com/JohnStratoudakis/LabVIEW_Docker
+
+downloading artifact: https://circleci.com/docs/2.0/artifacts/#downloading-all-artifacts-for-a-build-on-circleci
