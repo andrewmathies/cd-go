@@ -1,0 +1,33 @@
+goos: linux
+goarch: amd64
+pkg: github.com/andrewmathies/cd-go
+
+k = 10, max = 50
+BenchmarkCompare/naive-4         	            1000000000	         0.0707 ns/op
+BenchmarkCompare/divideAndConquer-4         	1000000000	         0.0412 ns/op
+3.914s
+
+k = 100, max = 50
+BenchmarkCompare/naive-4         	            1000000000	         0.0718 ns/op
+BenchmarkCompare/divideAndConquer-4         	1000000000	         0.0395 ns/op
+3.849s
+
+k = 100, max = 500
+BenchmarkCompare/naive-4         	            1000000000	         0.0743 ns/op
+BenchmarkCompare/divideAndConquer-4         	1000000000	         0.0412 ns/op
+4.543s
+
+k = 5, max = 500
+BenchmarkCompare/naive-4         	            1000000000	         0.0765 ns/op
+BenchmarkCompare/divideAndConquer-4         	1000000000	         0.0469 ns/op
+4.178s
+
+k = 2, max = 500
+BenchmarkCompare/naive-4         	            1000000000	         0.0717 ns/op
+BenchmarkCompare/divideAndConquer-4         	1000000000	         0.0425 ns/op
+3.881s
+
+k = 1, max = 500
+BenchmarkCompare/naive-4         	            1000000000	         0.0743 ns/op
+BenchmarkCompare/divideAndConquer-4         	1000000000	         0.0752 ns/op
+4.452s
